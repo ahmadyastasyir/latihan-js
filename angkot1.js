@@ -5,6 +5,6 @@ while (noAngkot <= angkotBeroperasi) {
   console.log("Angkot No. " + noAngkot + " beroperasi dengan baik.");
   noAngkot++;
 }
-for (var angkotBeroperasi = 7; angkotBeroperasi <= jumlahAngkot; angkotBeroperasi++) {
+for (noAngkot = angkotBeroperasi + 1; noAngkot <= jumlahAngkot; angkotBeroperasi++) {
   console.log("Angkot No. " + angkotBeroperasi + " sedang tidak beroperasi.");
 }
