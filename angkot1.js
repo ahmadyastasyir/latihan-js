@@ -1,10 +1,10 @@
 var jumlahAngkot = 10;
 var angkotBeroperasi = 6;
 var noAngkot = 1;
-while (noAngkot <= angkotBeroperasi) {
-  console.log("Angkot No. " + noAngkot + " beroperasi dengan baik.");
-  noAngkot++;
-}
-for (noAngkot = angkotBeroperasi + 1; noAngkot <= jumlahAngkot; angkotBeroperasi++) {
-  console.log("Angkot No. " + angkotBeroperasi + " sedang tidak beroperasi.");
+for (noAngkot = noAngkot; noAngkot <= jumlahAngkot; noAngkot++) {
+  if (noAngkot <= angkotBeroperasi) {
+    console.log("Angkot No. " + noAngkot + " Beroperasi dengan baik.");
+  } else {
+    console.log("Angkot No. " + noAngkot + " Sedang tidak beroperasi.");
+  }
 }
