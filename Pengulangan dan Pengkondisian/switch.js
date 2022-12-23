@@ -33,3 +33,26 @@ switch (angka) {
   default:
     alert("maaf angka yang anda masukan bukan 1-3");
 }
+
+console.log("  ");
+
+/* Versi lain */ console.log("Versi lain");
+
+console.log("  ");
+
+var item = prompt("masukan nama makanan atau minuman berikut :\n 1. nasi \n 2. milkshake \n 3. burger \n 4. ayam \n 5. jus buah");
+
+switch (item) {
+  case "nasi":
+  case "ayam":
+  case "jus buah":
+    alert("Makanan atau minuman yang anda pilih SEHAT menurut saya");
+    break;
+  case "milkshake":
+  case "burger":
+    alert("Makanan atau minuman yang anda pilih TIDAK SEHAT menurut saya");
+    break;
+  default:
+    alert("maaf, anda typo atau memasukan nama selain dari list");
+    break;
+}
