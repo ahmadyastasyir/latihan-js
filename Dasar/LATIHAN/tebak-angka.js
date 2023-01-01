@@ -1,31 +1,29 @@
-var lagi = true;
-
+let lagi = true;
 while (lagi) {
-  //Komputer membangkitkan angka random
-  var random = Math.floor(Math.random() * 10) + 1;
-  console.log(random);
-
-  // Player melakukan input (menebak)
-  var guess = prompt("Pilihlah angka antara 1-10! \n(Anda memiliki tiga kali kesempatan)");
-
-  // Alur Permainan
-  var hasil = "";
+  // comp
+  let comp = Math.round(Math.random() * 9) + 1;
+  console.log(comp);
+  // player input
+  let p = parseInt(prompt("Silakan masukan angka 1 - 10 \n(Anda memiliki 3 Kesempatan) \nTebak Kesempatan ke-1 :"));
+  // alur games
+  let hasil = "";
   for (var chance = 3; chance >= 1; chance--) {
-    if (guess == random) {
-      hasil = "BENAR";
-      alert("Angka tebakan anda " + hasil + ".");
+    if (p == comp) {
+      hasil = "BENAR!";
+      alert("Anda menebak angka " + comp + "\nTebakan anda " + hasil);
       break;
-    } else if (guess != random && chance > 1) {
-      hasil = guess < random ? "terlalu RENDAH" : "terlalu TINGGI";
-
-      guess = prompt("Angka tebakan anda " + hasil + ". \nCoba tebak lagi");
-    } else if (guess != random && chance == 1) {
-      hasil = "SALAH";
-      alert("Angka tebakan anda " + hasil + ". \nKesempatan anda sudah habis.");
+    } else if (p != comp && chance > 2) {
+      hasil = p < comp ? "Angka terlalu Rendah" : "Angka terlalu Tinggi";
+      p = parseInt(prompt("Angka tebakan anda " + hasil + "\nTebak Kesempatan ke-2 : "));
+    } else if (p != comp && chance > 1) {
+      hasil = p < comp ? "Angka terlalu Rendah" : "Angka terlalu Tinggi";
+      p = parseInt(prompt("Angka tebakan anda " + hasil + "\nTebak Kesempatan ke-3 : "));
+    } else if (p != comp && chance == 1) {
+      hasil = "SALAH!";
+      alert("Angka tebakan anda " + hasil + "\nKesempatan anda sudah habis! \nNomor yang benar adalah : " + comp);
     }
   }
 
-  lagi = confirm("Apakah anda ingin main lagi?");
+  lagi = confirm("Coba bermain lagi?");
 }
-
-alert("Terimakasih sudah bermain!");
+alert("Terimakasi Telah bermain");
